@@ -18,17 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
       friendDiv.appendChild(friendNameH2)
       friendDiv.innerHTML = ("<h2 class='name'>" + friends[j].toUpperCase() + "</h2>");
 
-      // let song = document.createElement("p")
-      // let songText = document.createTextNode(
-
-      // // song.innerText(friends[countD].toUpperCase());
-
-
+      
       for (let i = 99; i > 0; i--) {
 
         if (i >= 2) {
           let p = document.createElement("p")
-          p.innerText = (i + " lines of code in the file, " + i + " lines of code, " + friends[j] + " strikes one out, clears it all out, " + i + " lines of code in the file, ");
+          p.innerText = (i + " lines of code in the file, " + i + " lines of code, " + friends[j] + " strikes one out, clears it all out, " + (i-1) + " lines of code in the file, ");
           friendDiv.appendChild(p)
         } else if (i == 1) {
           let p = document.createElement("p")
@@ -36,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
           friendDiv.appendChild(p)
         } else {
           let p = document.createElement("p")
-          p.innerText = (i + " lines of code in the file, " + i + " lines of code, " + friends[j] + " strikes one out, clears it all out, " + i + " lines of code in the file.");
+          p.innerText = (i + " lines of code in the file, " + i + " lines of code, " + friends[j] + " strikes one out, clears it all out, " + (i-1) + " lines of code in the file.");
           friendDiv.appendChild(p)
         }
 
